@@ -165,6 +165,7 @@ function showResult (cr) {
 		  fontWeight &&
 		  (fontWeight.indexOf("black") != -1 ||
 		    fontWeight.indexOf("bold") != -1 ||
+		    fontWeight.indexOf("medium") != -1 ||
 		    fontWeight.indexOf("heavy") != -1)
 		) {
 		  isBold = true;
