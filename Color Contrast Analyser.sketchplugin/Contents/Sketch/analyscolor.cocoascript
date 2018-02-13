@@ -158,10 +158,16 @@ function showResult (cr) {
 
 	if (textLayer != null) {
 		var fontSize = textLayer.fontSize();
+		var fontWeight = textLayer.fontPostscriptName().toLowerCase().split("-")[1];
 		var isBold = false;
 
-		if (textLayer.fontPostscriptName().indexOf("Bold") != -1) {
-			var isBold = true;
+		if (
+		  fontWeight &&
+		  (fontWeight.indexOf("black") != -1 ||
+		    fontWeight.indexOf("bold") != -1 ||
+		    fontWeight.indexOf("heavy") != -1)
+		) {
+		  isBold = true;
 		}
 	}
 
